@@ -10,8 +10,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 
 export function createGallery(images) {
-    const markup = images
-        .slice(0, 9) // обмежуємо 9 картинок
+    const markup = imagesg
         .map(
             img => `
         <li class="image-wrapper">
