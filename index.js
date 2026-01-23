@@ -22,7 +22,7 @@ import{a as d,S as u,i as l}from"./assets/vendor-CNqCr-V-.js";(function(){const 
             </div>
           </div>
         </li>
-        `).join("");p.innerHTML=a,C.refresh()}function L(){p.innerHTML=""}function y(){o.classList.remove("hidden"),o.textContent="Loading images, please wait..."}function w(){o.classList.add("hidden")}const v=document.querySelector(".form");v.addEventListener("submit",async r=>{r.preventDefault();const a=r.target.elements["search-text"].value.trim();if(!a){l.warning({message:"Please enter a search query!",position:"topRight"});return}L(),y(),await new Promise(t=>setTimeout(t,50));try{const t=await h(a);if(t.hits.length===0){c();return}g(t.hits)}catch{c()}finally{w()}});function c(){l.error({position:"topRight",backgroundColor:"#EF4040",timeout:3e3,close:!1,icon:"",message:`
+    `).join("");p.innerHTML=a,C.refresh()}function L(){p.innerHTML=""}function y(){o.classList.remove("hidden"),o.textContent="Loading images, please wait..."}function w(){o.classList.add("hidden")}const v=document.querySelector(".form");v.addEventListener("submit",async r=>{r.preventDefault();const a=r.target.elements["search-text"].value.trim();if(!a){l.warning({message:"Please enter a search query!",position:"topRight"});return}L(),y(),await new Promise(t=>setTimeout(t,50));try{const t=await h(a);if(t.hits.length===0){c();return}g(t.hits)}catch{c()}finally{w()}});function c(){l.error({position:"topRight",backgroundColor:"#EF4040",timeout:3e3,close:!1,icon:"",message:`
       <div class="toast-content">
         <span class="toast-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
