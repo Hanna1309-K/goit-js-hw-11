@@ -24,22 +24,20 @@ body {
 /* Поле вводу */
 .form input[type="text"] {
     width: 272px;
+    /* ширина панелі */
     height: 40px;
+    /* висота панелі */
     padding: 0 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     color: #2e2f42;
     background-color: #fff !important;
+    /* біла панель */
     outline: none;
-    /* прибираємо стандартну рамку */
-    box-shadow: none !important;
-    /* прибираємо підсвітку */
-    -webkit-appearance: none;
-    /* Chrome/Safari */
-    -moz-appearance: none;
-    /* Firefox */
-    appearance: none;
+    transition: border-color 0.2s ease;
+    box-shadow: none;
+    /* прибирає блакитне сяйво при focus */
 }
 
 .form input[type="text"]:hover {
@@ -48,10 +46,6 @@ body {
 
 .form input[type="text"]:focus {
     border-color: #4e75ff;
-    /* синій бордер тільки */
-    background-color: #fff !important;
-    box-shadow: none !important;
-    outline: none !important;
 }
 
 /* Кнопка */

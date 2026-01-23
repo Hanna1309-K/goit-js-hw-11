@@ -10,7 +10,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 
 export function createGallery(images) {
-    const markup = imagesg
+    const markup = images
         .map(
             img => `
         <li class="image-wrapper">
@@ -36,11 +36,11 @@ export function createGallery(images) {
             </div>
           </div>
         </li>
-      `
+        `
         )
         .join('');
 
-    gallery.innerHTML = markup; // додаємо всі картки одночасно
+    gallery.innerHTML = markup;
     lightbox.refresh();
 }
 
