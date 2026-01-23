@@ -4,15 +4,17 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 
+// Ініціалізація SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
 });
 
+// Створення галереї
 export function createGallery(images) {
+    // Використовуємо звичайні рядки-шаблони, без JSX
     const markup = images
-        .map(
-            img => `
+        .map(img => `
         <li class="image-wrapper">
           <a href="${img.largeImageURL}">
             <img src="${img.webformatURL}" alt="${img.tags}" />
@@ -36,23 +38,24 @@ export function createGallery(images) {
             </div>
           </div>
         </li>
-        `
-        )
-        .join('');
+    `).join('');
 
-    gallery.innerHTML = markup;
-    lightbox.refresh();
+    gallery.innerHTML = markup; // додаємо всі картки одночасно
+    lightbox.refresh(); // оновлюємо SimpleLightbox після додавання карток
 }
 
+// Очищаємо галерею перед новим пошуком
 export function clearGallery() {
     gallery.innerHTML = '';
 }
 
+// Показуємо лоадер
 export function showLoader() {
     loader.classList.remove('hidden');
-    loader.textContent = 'Loading images, please wait...'; // текст лоадера
+    loader.textContent = 'Loading images, please wait...';
 }
 
+// Ховаємо лоадер
 export function hideLoader() {
     loader.classList.add('hidden');
 }
